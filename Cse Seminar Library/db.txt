@@ -1,0 +1,72 @@
+CREATE TABLE IF NOT EXISTS `admin` (
+  `Id` varchar(20) NOT NULL,
+  `Password` varchar(30) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`Id`, `Password`) VALUES
+('admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `books`
+--
+
+CREATE TABLE IF NOT EXISTS `books` (
+  `Title` varchar(50) NOT NULL,
+  `Publisher` varchar(50) NOT NULL,
+  `Category` varchar(20) NOT NULL,
+  `Quantity` int(11) NOT NULL,
+  `Available` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `books`
+--
+
+INSERT INTO `books` (`Title`, `Publisher`, `Category`, `Quantity`, `Available`) VALUES
+('Introduction to Algorithms', 'MIT press', 'Algo', 5, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `borrower`
+--
+
+CREATE TABLE IF NOT EXISTS `borrower` (
+  `Title` varchar(50) NOT NULL,
+  `Reg` int(15) NOT NULL,
+  `Borrow_date` varchar(15) NOT NULL,
+  `Return_date` varchar(15) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `borrower`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `members`
+--
+
+CREATE TABLE IF NOT EXISTS `members` (
+  `Memberid` int(100) NOT NULL AUTO_INCREMENT,
+  `Reg` varchar(20) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Password` varchar(20) NOT NULL,
+  `Activation` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`Memberid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=101 ;
+
+--
+-- Dumping data for table `members`
+--
+
+INSERT INTO `members` (`Memberid`, `Reg`, `Email`, `Password`, `Activation`) VALUES
+(100, '2008331056', 'tafreelancer8@gmail.com', '123', NULL);

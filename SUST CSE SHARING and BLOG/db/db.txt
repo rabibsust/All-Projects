@@ -1,0 +1,34 @@
+===Database sust_blog
+
+== Table structure for table admin
+
+|------
+|Field|Type|Null|Default
+|------
+|Id|varchar(20)|Yes|NULL
+|Password|varchar(30)|Yes|NULL
+== Dumping data for table admin
+
+|admin|admin
+== Table structure for table members
+
+|------
+|Field|Type|Null|Default
+|------
+|//**Memberid**//|int(100)|Yes|NULL
+|Reg|varchar(20)|Yes|NULL
+|Email|varchar(50)|Yes|NULL
+|Password|varchar(20)|Yes|NULL
+|Activation|varchar(40)|Yes|NULL
+== Dumping data for table members
+
+|100|2008331056|tafreelancer8@gmail.com|123|NULL
+== Table structure for table post
+
+|------
+|Field|Type|Null|Default
+|------
+|title|varchar(100)|Yes|NULL
+|details|varchar(1000)|Yes|NULL
+== Dumping data for table post
+
